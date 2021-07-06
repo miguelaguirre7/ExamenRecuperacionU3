@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Susy",
+        "surname": "Palafox",
+        "description": "Ejemplo 1",
+        "sex": "mujer",
+        "email": "susy@gmail.com",
+        "telephone": "6623545687",
+        "carrera": "Ingenieria Industrial"
+    },
+    {
+        "name": "Stephanie",
+        "surname": "Diaz",
+        "description": "Ejemplo 2",
+        "sex": "mujer",
+        "email": "sthepanie@outlook.com",
+        "telephone": "6612346597",
+        "carrera": "Ingeniero Industrial"
+    },
+    {
+        "name": "Selena",
+        "surname": "Gomez",
+        "description": "Ejemplo 4",
+        "sex": "mujer",
+        "email": "selenagomez@music.com",
+        "telephone": "6613245798",
+        "carrera": "Lic. Ciencias de la Comunicación",
+        "image": "/assets/img/user2.jpg"
+    },
+    {
+        "name": "Erick",
+        "surname": "Gimenez",
+        "description": "Ejemplo 5",
+        "sex": "hombre",
+        "email": "erick@outlook.com",
+        "telephone": "6634215467",
+        "carrera": "Ingeniero en Sistemas"
+    },
+    {
+        "name": "Sandra",
+        "surname": "Perez",
+        "description": "Ejemplo 6",
+        "sex": "mujer",
+        "email": "sandra@languajes.com",
+        "telephone": "6624659876",
+        "carrera": "Lic. en Idiomas"
+    },
+    {
+        "name": "Nicole",
+        "surname": "Montenegro",
+        "description": "Ejemplo 7",
+        "sex": "mujer",
+        "email": "nicole@hotmail.com",
+        "telephone": "6623124658",
+        "carrera": "Web Developer"
+    },
+    {
+        "name": "Brenda",
+        "surname": "Rios",
+        "description": "Ejemplo 8",
+        "sex": "mujer",
+        "email": "brenda@tecnm.mx",
+        "telephone": "6621326547",
+        "carrera": "Programación"
+    }
+
+]

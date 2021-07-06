@@ -1,0 +1,92 @@
+<div class="row" id="list-contacts">
+  <div class="col-12">
+
+    <div class="row">
+      <div class="col-12">
+        <h1>Lista de contactos</h1>
+      </div>
+    </div>
+
+    <!-- Solo se muestra si la lista de contactos -->
+    <ng-container *ngIf="listContacts.length > 0">
+
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4" *ngFor="let contact of listContacts;let index=index">
+
+          <!-- Carta de los contactos -->
+          <div class="card h-100">
+            <div class="card-body">
+              <!-- Info del contacto -->
+              <h4 class="card-title">{{(contact.surname + ", "+ contact.name | capitalize) +" ("+contact.sex+")"}}</h4>
+              <p class="card-text">{{contact.description}}</p>
+            </div>
+            <div class="card-footer">
+              <a class="btn btn-block btn-primary text-light" data-toggle="modal" [attr.data-target]="'#modal_'+index" role="button">Ver detalles</a>
+            </div>
+          </div>
+          
+           <!-- Modal del contactos -->
+          <div class="modal fade" [attr.id]="'modal_'+index" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">{{contact.surname + ", "+ contact.name | capitalize}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-3">
+                      <!-- Imagen del contacto -->
+                      <img class="img-fluid" [src]="contact.sex === 'hombre' ? 'assets/img/perfil-fb-hombre.jpg' : 'assets/img/perfil-fb-mujer.jpg'" alt="">
+                    </div>
+                    <div class="col-9">
+                      <div class="row">
+                        <div class="col-12">
+                          <!-- Descripcion del contacto -->
+                          <span>{{contact.description ? contact.description : 'Sin descripción'}}</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <!-- Telefono -->
+                          <span class="d-block">Telefono: </span>
+                          <span class="d-block">{{contact.telephone}}</span>
+                        </div>
+                        <div class="col-6">
+                          <span class="d-block">Email: </span>
+                          <span class="d-block ellipsis" [title]="contact.email">{{contact.email}}</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 mt-4">
+                          <!-- Carrera -->
+                          {{contact.carrera ? 'Carrera: '+contact.carrera: 'Carrera no especificada'}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </ng-container>
+
+    <!-- Se muestra cuando no hay contactos -->
+    <ng-container *ngIf="listContacts.length === 0">
+
+      <div class="row">
+        <div class="col-12">
+          <p>No hay contactos disponibles.</p>
+        </div>
+      </div>
+
+    </ng-container>
+
+  </div>
+</div>
